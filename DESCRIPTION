@@ -23,3 +23,5 @@ Imports:
     magrittr,
     utils,
     tidyselect
+URL: https://github.com/Lextuga007/smokingPrevalence
+BugReports: https://github.com/Lextuga007/smokingPrevalence/issues
