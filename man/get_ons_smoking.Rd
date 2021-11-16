@@ -7,7 +7,7 @@
 get_ons_smoking()
 }
 \value{
-
+data frame
 }
 \description{
 The data from ONS is in wide form and the spreadsheet has many tabs

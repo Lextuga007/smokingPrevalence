@@ -7,7 +7,7 @@
 tidy_ons_smoking()
 }
 \value{
-
+data frame
 }
 \description{
 Because the column names are split between two rows in this dataset,
