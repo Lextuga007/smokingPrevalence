@@ -1,0 +1,55 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# smokingPrevalence
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of smokingPrevalence is to store functions that are used in analysis for 
+smoking prevalence including ONS public prevalence information to compare to.
+
+## Installation
+
+You can install the development version of smokingPrevalence from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("Lextuga007/smokingPrevalence")
+```
+
+## ONS public smoking prevalence data
+
+The data is released in wide form and the following imports this data as it appears
+in the spreadsheet form:
+
+```{r example}
+library(smokingPrevalence)
+
+get_ons_smoking()
+```
+
+To tidy the data, as in move it to long form and to clean the 2 row headers to 1:
+
+```{r}
+library(smokingPrevalence)
+library(dplyr)
+library(stringr) # cannot knit without - should be ok with dependency?
+
+tidy_ons_smoking()
+```
+
+Reference: The function format of getting data and tidying data was introduced to 
+the CDU Data Science Team by Milan Wiedemann who [blogged about it](https://cdu-data-science-team.github.io/team-blog/posts/2021-08-06-nottshcverse/)
