@@ -8,6 +8,7 @@
 #' original is required then `clean = FALSE`
 #'
 #' @return data frame
+#' @export
 get_smoking_wide <- function(clean = TRUE) {
   url1 <- "https://www.ons.gov.uk/file?uri=%2fpeoplepopulationandcommunity%2fhealthandsocialcare%2fdrugusealcoholandsmoking%2fdatasets%2fadultsmokinghabitsingreatbritain%2f2019/adultsmokinghabitsingreatbritain2019final.xls"
   p1f <- withr::local_tempfile(fileext = "xls")

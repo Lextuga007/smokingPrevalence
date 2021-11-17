@@ -25,17 +25,19 @@ library(smokingPrevalence)
 With defaults all set of adding a year column for working with dates (the start
 of a year format `yyyy-mm-dd`), rounding prevalence figures to whole numbers and
 splitting the `age_bands` column which was merged from two rows in the original
-spreadsheet into two columns: `age` and `gender`
+spreadsheet into two columns: `age` and `gender`.
 
-```{r}
-library(smokingPrevalence)
+Default output:
 
+``` r
 # default
 tidy_smoking_long()
+```
 
-# turn off all defaults
-tidy_ons_long(add_year = FALSE,
+Turn off all defaults:
+
+``` r
+tidy_smoking_long(add_year = FALSE,
               rounding = FALSE,
               separate_cols = FALSE)
-
 ```

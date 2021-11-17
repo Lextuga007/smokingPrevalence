@@ -8,10 +8,11 @@
 #' gender and age to separate columns in long form. Default is to separate
 #'
 #' @return Data frame
+#' @export
 tidy_smoking_long <- function(add_year = TRUE,
                               rounding = TRUE,
                               separate_cols = TRUE) {
-  df <- get_smoking_wide() # default is clean
+  df <- smokingPrevalence::get_smoking_wide() # default is clean
 
   df <- df %>%
     tidyr::pivot_longer(

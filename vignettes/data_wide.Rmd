@@ -16,6 +16,11 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(smokingPrevalence)
+library(dplyr)
+library(tidyr)
+library(withr)
+library(utils)
+library(readxl)
 ```
 
 ## ONS public smoking prevalence data
@@ -26,16 +31,12 @@ The data is released in wide form and the following imports this data as it appe
 in the spreadsheet form:
 
 ```{r example}
-library(smokingPrevalence)
-
 get_smoking_wide(clean = FALSE)
 ```
 
 To tidy the wide data which combines the 2 row headers to 1 and removes blank rows and columns:
 
 ```{r}
-library(smokingPrevalence)
-
 get_smoking_wide() 
 
 #or explicitly
