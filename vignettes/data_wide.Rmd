@@ -16,11 +16,6 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(smokingPrevalence)
-library(dplyr)
-library(tidyr)
-library(withr)
-library(utils)
-library(readxl)
 ```
 
 ## ONS public smoking prevalence data

@@ -29,14 +29,14 @@ spreadsheet into two columns: `age` and `gender`.
 
 Default output:
 
-``` r
+```{r }
 # default
 tidy_smoking_long()
 ```
 
 Turn off all defaults:
 
-``` r
+```{r }
 tidy_smoking_long(add_year = FALSE,
               rounding = FALSE,
               separate_cols = FALSE)
