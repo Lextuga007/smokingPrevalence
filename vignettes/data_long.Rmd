@@ -1,0 +1,41 @@
+---
+title: "data_long"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{data_long}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(smokingPrevalence)
+```
+
+## ONS public smoking prevalence data
+
+### Even tidier long form
+
+With defaults all set of adding a year column for working with dates (the start
+of a year format `yyyy-mm-dd`), rounding prevalence figures to whole numbers and
+splitting the `age_bands` column which was merged from two rows in the original
+spreadsheet into two columns: `age` and `gender`
+
+```{r}
+library(smokingPrevalence)
+
+# default
+tidy_smoking_long()
+
+# turn off all defaults
+tidy_ons_long(add_year = FALSE,
+              rounding = FALSE,
+              separate_cols = FALSE)
+
+```

@@ -1,0 +1,46 @@
+---
+title: "data_wide"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{data_wide}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(smokingPrevalence)
+```
+
+## ONS public smoking prevalence data
+
+### Original wide form
+
+The data is released in wide form and the following imports this data as it appears
+in the spreadsheet form:
+
+```{r example}
+library(smokingPrevalence)
+
+get_smoking_wide(clean = FALSE)
+```
+
+To tidy the wide data which combines the 2 row headers to 1 and removes blank rows and columns:
+
+```{r}
+library(smokingPrevalence)
+
+get_smoking_wide() 
+
+#or explicitly
+
+get_smoking_wide(clean = TRUE) 
+
+```
+
